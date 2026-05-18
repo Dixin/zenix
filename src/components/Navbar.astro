@@ -1,12 +1,6 @@
 ---
 import Button from './Button.astro';
-
-const navLinks = [
-  { href: '#features', label: 'Features' },
-  { href: '#testimonials', label: 'Testimonials' },
-  { href: '/pricing', label: 'Pricing' },
-  { href: '/blog', label: 'Blog' },
-];
+import { NAV_LINKS, BRAND_NAME, BRAND_LOGO_TEXT } from '../config';
 ---
 
 <header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
@@ -16,15 +10,15 @@ const navLinks = [
       <div class="flex-shrink-0">
         <a href="/" class="flex items-center gap-2">
           <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-xl leading-none">Z</span>
+            <span class="text-white font-bold text-xl leading-none">{BRAND_LOGO_TEXT}</span>
           </div>
-          <span class="font-heading font-bold text-xl text-slate-900">Zenith</span>
+          <span class="font-heading font-bold text-xl text-slate-900">{BRAND_NAME}</span>
         </a>
       </div>
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-8">
-        {navLinks.map(link => (
+        {NAV_LINKS.map(link => (
           <a href={link.href} class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
             {link.label}
           </a>
@@ -54,7 +48,7 @@ const navLinks = [
   <!-- Mobile menu, show/hide based on menu state. -->
   <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-      {navLinks.map(link => (
+      {NAV_LINKS.map(link => (
         <a href={link.href} class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50">
           {link.label}
         </a>
