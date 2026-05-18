@@ -1,4 +1,7 @@
 ---
+import { ClientRouter } from 'astro:transitions';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/space-grotesk';
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -22,6 +25,28 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
     <meta name="description" content={description} />
     
     <title>{title} | {SITE_TITLE}</title>
+
+    <ClientRouter />
+
+    <!-- Dark Mode initialization script to prevent FOUC -->
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+    
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+      window.localStorage.setItem('theme', theme);
+    </script>
   </head>
   <body class="flex flex-col min-h-screen">
     <Navbar />
@@ -29,5 +54,28 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
       <slot />
     </main>
     <Footer />
+
+    <!-- Global Intersection Observer for Scroll Animations -->
+    <script>
+      document.addEventListener('astro:page-load', () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              // Optional: Stop observing once revealed
+              // observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        });
+
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+          observer.observe(el);
+        });
+      });
+    </script>
   </body>
 </html>

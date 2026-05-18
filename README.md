@@ -1,43 +1,106 @@
-# Astro Starter Kit: Minimal
+<div align="center">
 
-```sh
-npm create astro@latest -- --template minimal
+  <h1>✨ Zenith Astro Theme</h1>
+
+  <p>A hand-crafted, highly technical Astro theme built for Micro-SaaS founders who want to stand out from the generic "AI-generated" look.</p>
+
+  <p>
+    <a href="https://farrosfr.github.io/zenith/"><img src="https://img.shields.io/badge/View_Demo-Live_Preview-4F46E5?style=for-the-badge" alt="View Demo" /></a>
+    <img src="https://img.shields.io/badge/Astro-v5.0-FF5D01?style=for-the-badge&logo=astro&logoColor=white" alt="Astro Version" />
+    <img src="https://img.shields.io/badge/Tailwind-v4.0-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind Version" />
+  </p>
+
+</div>
+
+---
+
+## 🚀 Why Zenith?
+
+The market is flooded with standard, safe, centered layouts. Zenith breaks the mold. We built Zenith with aggressive architectural decisions to ensure your product looks **premium, hand-crafted, and technically sophisticated.**
+
+*   **⚡️ Blazing Fast:** Built on Astro's islands architecture. Ships zero JavaScript by default.
+*   **💅 "Anti-Generic" Design:** Features a complex asymmetrical "Bento Box" grid, subtle scroll-reveal animations, and bespoke typography (Space Grotesk + Inter).
+*   **🌑 True Dark Mode:** Not just inverted colors. A dedicated OLED-optimized dark theme engine built natively with Tailwind `dark:` variants.
+*   **🧠 SPA-like Routing:** Utilizes Astro's native `<ViewTransitions />` for instant, seamless page navigation.
+*   **📝 Powerful Content Engine:** Write in MDX. Comes with a sticky, auto-updating Table of Contents and custom UI components (like `<Callout>`) out of the box.
+
+## 🛠️ Quick Start
+
+Get up and running in under 2 minutes.
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/zenith.git my-saas
+
+# 2. Enter the directory
+cd my-saas
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Visit `http://localhost:4321` to see your site live!
 
-## 🚀 Project Structure
+## ⚙️ Configuration (The `config.ts` File)
 
-Inside of your Astro project, you'll see the following folders and files:
+Zenith is designed to be customized from a single file. Open `src/config.ts` to instantly change the branding across the entire site:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```typescript
+// src/config.ts
+export const SITE_TITLE = 'Your App Name';
+export const SITE_DESCRIPTION = 'The best solution for X.';
+
+// Social Links (Updates the Footer instantly)
+export const SOCIAL_LINKS = {
+  twitter: 'https://twitter.com/yourhandle',
+  github: 'https://github.com/yourhandle',
+};
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🎨 Writing Content (Blog & Changelog)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Zenith utilizes the modern **Astro Content Layer API**. 
 
-Any static assets, like images, can be placed in the `public/` directory.
+All content lives in the `src/content/` directory. You can write using standard Markdown (`.md`) or MDX (`.mdx`).
 
-## 🧞 Commands
+### Adding a new blog post:
+Create a new `.mdx` file in `src/content/blog/`:
 
-All commands are run from the root of the project, from a terminal:
+```mdx
+---
+title: "My First Post"
+description: "A short summary."
+pubDate: 2026-06-01
+author: "Founder"
+tags: ["update", "feature"]
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+# Hello World!
 
-## 👀 Want to learn more?
+This is my first post. 
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+<Callout type="success" title="Success!">
+  You can use custom MDX components right inside your writing!
+</Callout>
+```
+
+## 🚢 Deployment
+
+Zenith is a static site. You can deploy it for free anywhere!
+
+### Vercel / Netlify / Cloudflare Pages
+1. Push your code to a GitHub repository.
+2. Import the repository into your preferred hosting provider.
+3. The platform will automatically detect Astro and build your site.
+
+### GitHub Pages
+Zenith includes a pre-configured GitHub Actions workflow (`.github/workflows/deploy.yml`). Just push to your `main` or `master` branch, and the action will automatically build and deploy your site to GitHub Pages!
+
+*(Note: Ensure you update the `site` and `base` properties in `astro.config.mjs` if using GitHub pages).*
+
+## 📄 License
+
+MIT License. Do whatever you want with it! (Just don't resell the theme itself).
