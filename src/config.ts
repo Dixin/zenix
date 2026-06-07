@@ -2,8 +2,8 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'Zenix';
-export const SITE_DESCRIPTION = 'High-converting, performance-focused Astro theme for Micro-SaaS products.';
-export const SITE_URL = 'https://zenix.farros.co'; // Replace with your domain
+export const SITE_DESCRIPTION = 'A high-performance, 100/100 Lighthouse-optimized Astro 6 SaaS theme with dark mode, MDX blog, and command palette search.';
+export const SITE_URL = 'https://zenix.farros.co';
 export const REPOSITORY_URL = 'https://github.com/farrosfr/zenix';
 
 // Brand Settings
