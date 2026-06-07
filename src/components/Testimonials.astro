@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 const testimonials = [
   {
     quote: "Zenix saved me weeks of development time. I was able to focus entirely on my product's core features instead of tweaking landing page CSS.",
@@ -51,7 +53,7 @@ const testimonials = [
           </blockquote>
           
           <div class="flex items-center gap-4 relative z-10">
-            <img src={t.avatar} alt={`Portrait of ${t.author}`} width="48" height="48" class="w-12 h-12 rounded-full border-2 border-slate-100 dark:border-slate-800 shadow-sm" loading="lazy" />
+            <Image src={t.avatar} alt={`Portrait of ${t.author}`} width={48} height={48} class="w-12 h-12 rounded-full border-2 border-slate-100 dark:border-slate-800 shadow-sm" loading="lazy" />
             <div>
               <div class="font-bold text-slate-900 dark:text-white">{t.author}</div>
               <div class="text-sm text-slate-500 dark:text-slate-400">{t.role}</div>

@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
+import { passthroughImageService } from 'astro/config';
 
 import mdx from '@astrojs/mdx';
 
@@ -12,6 +13,11 @@ export default defineConfig({
 
   build: {
     inlineStylesheets: 'always'
+  },
+
+  image: {
+    service: passthroughImageService(),
+    domains: ['i.pravatar.cc']
   },
 
   vite: {

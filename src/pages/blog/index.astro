@@ -1,5 +1,6 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Badge from '../../components/Badge.astro';
 import { resolvePath } from '../../utils/navigation';
@@ -55,7 +56,7 @@ const postsWithAuthors = await Promise.all(posts.map(async (post) => {
                 <span class="relative inline-flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary-100 text-[9px] font-bold text-primary-700 ring-1 ring-primary-200 dark:bg-primary-900/40 dark:text-primary-300 dark:ring-primary-800">
                   <span>{post.authorInitials}</span>
                   {post.authorData?.avatar && (
-                    <img src={post.authorData.avatar} alt={`${post.authorName} avatar`} width="20" height="20" class="absolute inset-0 h-full w-full rounded-full object-cover" loading="lazy" onerror="this.remove()" />
+                    <Image src={post.authorData.avatar} alt={`${post.authorName} avatar`} width={20} height={20} class="absolute inset-0 h-full w-full rounded-full object-cover" loading="lazy" />
                   )}
                 </span>
                 <span>{post.authorName}</span>
