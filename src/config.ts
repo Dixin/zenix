@@ -1,20 +1,20 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'Zenix';
+export const SITE_TITLE = 'MuseumCloud.net';
 export const SITE_DESCRIPTION = 'A high-performance, 100/100 Lighthouse-optimized Astro 6 SaaS theme with dark mode, MDX blog, and command palette search.';
-export const SITE_URL = 'https://zenix.farros.co';
-export const REPOSITORY_URL = 'https://github.com/farrosfr/zenix';
+export const SITE_URL = 'https://museumcloud.net';
+export const REPOSITORY_URL = 'https://github.com/Dixin/zenix';
 
 // Brand Settings
-export const BRAND_NAME = 'Zenix';
-export const BRAND_LOGO_TEXT = 'Z';
+export const BRAND_NAME = 'MuseumCloud';
+export const BRAND_LOGO_TEXT = 'Mc';
 
 // Social Links
 export const SOCIAL_LINKS = {
-  twitter: 'https://twitter.com/farrosfr_',
-  github: 'https://github.com/farrosfr',
-  linkedin: 'https://linkedin.com/in/yourhandle',
+  twitter: 'https://twitter.com/dixinyan',
+  github: 'https://github.com/Dixin',
+  linkedin: 'https://linkedin.com/in/dixin',
 };
 
 // Navigation Links
