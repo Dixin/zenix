@@ -4,7 +4,7 @@
 export const SITE_TITLE = 'MuseumCloud.net';
 export const SITE_DESCRIPTION = 'A high-performance, 100/100 Lighthouse-optimized Astro 6 SaaS theme with dark mode, MDX blog, and command palette search.';
 export const SITE_URL = 'https://museumcloud.net';
-export const REPOSITORY_URL = 'https://github.com/Dixin/zenix';
+export const REPOSITORY_URL = 'https://github.com/Dixin/museumcloud';
 
 // Brand Settings
 export const BRAND_NAME = 'MuseumCloud';
