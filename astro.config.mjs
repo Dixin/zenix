@@ -7,8 +7,7 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://dixin.github.io',
-  base: '/zenix',
+  site: 'https://museumcloud.net',
   trailingSlash: 'always',
 
   build: {
