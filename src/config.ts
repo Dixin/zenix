@@ -8,7 +8,7 @@ export const REPOSITORY_URL = 'https://github.com/Dixin/MuseumCloud';
 
 // Brand Settings
 export const BRAND_NAME = 'MuseumCloud';
-export const BRAND_LOGO_TEXT = 'Mc';
+export const BRAND_LOGO_TEXT = 'MC';
 
 // Social Links
 export const SOCIAL_LINKS = {
