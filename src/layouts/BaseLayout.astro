@@ -114,10 +114,10 @@ const structuredData =
           if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
             return localStorage.getItem('theme');
           }
-          if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            return 'dark';
+          if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            return 'light';
           }
-          return 'light';
+          return 'dark';
         };
 
         const applyTheme = (theme, root = document.documentElement) => {
@@ -127,8 +127,8 @@ const structuredData =
 
         applyTheme(getPreferredTheme());
 
-        if (!window.__zenixThemeBound) {
-          window.__zenixThemeBound = true;
+        if (!window.___ThemeBound) {
+          window.___ThemeBound = true;
 
           document.addEventListener('astro:before-swap', (event) => {
             const theme = localStorage.getItem('theme') || getPreferredTheme();
