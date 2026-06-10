@@ -70,13 +70,13 @@ test.describe('theme and navigation regressions', () => {
     expect(login?.status()).toBeLessThan(400);
     await expect(page.getByRole('heading', { name: 'Sign in' })).toBeVisible();
     await expect(page.getByText('Demo only. This form does not create a session or send credentials.')).toBeVisible();
-    await expect(page.getByRole('link', { name: 'View GitHub Repo' }).first()).toHaveAttribute('href', 'https://github.com/Dixin/MuseumCloud');
+    await expect(page.getByRole('link', { name: 'View GitHub Repo' }).first()).toHaveAttribute('href', 'https://github.com/Dixin/CulturesPro');
 
     const signup = await page.goto('/signup/');
     expect(signup?.status()).toBeLessThan(400);
     await expect(page.getByRole('heading', { name: 'Create account' })).toBeVisible();
     await expect(page.getByText('Demo only. Use this as a UI starting point for Supabase, Clerk, Auth.js, or your own backend.')).toBeVisible();
-    await expect(page.getByRole('link', { name: 'View GitHub Repo' }).first()).toHaveAttribute('href', 'https://github.com/Dixin/MuseumCloud');
+    await expect(page.getByRole('link', { name: 'View GitHub Repo' }).first()).toHaveAttribute('href', 'https://github.com/Dixin/CulturesPro');
   });
 });
 
@@ -84,14 +84,14 @@ test.describe('search modal regressions', () => {
   test('search results stay sharp and readable over blurred backdrop', async ({ page }) => {
     await page.goto('/');
     await page.locator('button[onclick="window.toggleCommandPalette()"]:visible').first().click();
-    await page.locator('#search-input').fill('MuseumCloud');
+    await page.locator('#search-input').fill('CulturesPro');
 
     const palette = page.locator('#command-palette > div').nth(1);
     const backdrop = page.locator('[data-command-backdrop]');
     const result = page.locator('#search-results li').first();
 
     await expect(result).toBeVisible();
-    await expect(result).toContainText(/MuseumCloud/i);
+    await expect(result).toContainText(/CulturesPro/i);
     await expect(backdrop).toHaveCSS('backdrop-filter', /blur/);
     await expect(palette).toHaveCSS('filter', 'none');
   });
@@ -99,7 +99,7 @@ test.describe('search modal regressions', () => {
 
 test.describe('blog regressions', () => {
   test('blog detail renders author once with fallback avatar and balanced callouts', async ({ page }) => {
-    await page.goto('/blog/MuseumCloud/');
+    await page.goto('/blog/CulturesPro/');
 
     const authorName = page.getByText('Dixin');
     await expect(authorName).toHaveCount(2);
@@ -112,7 +112,7 @@ test.describe('blog regressions', () => {
     await expect(authorCard).toContainText('MF');
     await expect(authorCard).toContainText('Founder & Lead Developer');
 
-    const callout = page.getByText('The MuseumCloud Philosophy').locator('..').locator('..');
+    const callout = page.getByText('The CulturesPro Philosophy').locator('..').locator('..');
     const content = page.locator('.prose').first();
     const calloutBox = await callout.boundingBox();
     const contentBox = await content.boundingBox();
@@ -135,22 +135,22 @@ test.describe('seo regressions', () => {
   test('homepage exposes canonical, robots, open graph, and twitter metadata', async ({ page }) => {
     await page.goto('/');
 
-    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://MuseumCloud.net/');
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://CulturesPro.com/');
     await expect(page.locator('link[rel="sitemap"]')).toHaveAttribute('href', '/sitemap.xml');
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'index, follow');
-    await expect(page.locator('meta[property="og:title"]')).toHaveAttribute('content', 'Home | MuseumCloud');
+    await expect(page.locator('meta[property="og:title"]')).toHaveAttribute('content', 'Home | CulturesPro');
     await expect(page.locator('meta[property="og:type"]')).toHaveAttribute('content', 'website');
-    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute('content', 'https://MuseumCloud.net/');
-    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', 'https://MuseumCloud.net/og-image.png');
+    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute('content', 'https://CulturesPro.com/');
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', 'https://CulturesPro.com/og-image.png');
     await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute('content', 'summary_large_image');
     await expect(page.locator('meta[name="twitter:site"]')).toHaveAttribute('content', '@dixnyan');
-    await expect(page.locator('meta[name="twitter:image"]')).toHaveAttribute('content', 'https://MuseumCloud.net/og-image.png');
+    await expect(page.locator('meta[name="twitter:image"]')).toHaveAttribute('content', 'https://CulturesPro.com/og-image.png');
   });
 
   test('article pages expose article dates and BlogPosting structured data', async ({ page }) => {
-    await page.goto('/blog/MuseumCloud/');
+    await page.goto('/blog/CulturesPro/');
 
-    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://MuseumCloud.net/blog/MuseumCloud/');
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://CulturesPro.com/blog/CulturesPro/');
     await expect(page.locator('meta[property="og:type"]')).toHaveAttribute('content', 'article');
     await expect(page.locator('meta[property="article:published_time"]')).toHaveAttribute('content', '2026-05-18T00:00:00.000Z');
     await expect(page.locator('meta[property="article:modified_time"]')).toHaveAttribute('content', '2026-05-18T00:00:00.000Z');
@@ -165,14 +165,14 @@ test.describe('seo regressions', () => {
   test('sitemap and robots are crawlable', async ({ page }) => {
     const sitemap = await page.goto('/sitemap.xml');
     expect(sitemap?.ok()).toBe(true);
-    await expect(page.locator('body')).toContainText('https://MuseumCloud.net/');
-    await expect(page.locator('body')).toContainText('https://MuseumCloud.net/blog/MuseumCloud/');
+    await expect(page.locator('body')).toContainText('https://CulturesPro.com/');
+    await expect(page.locator('body')).toContainText('https://CulturesPro.com/blog/CulturesPro/');
 
     const robots = await page.goto('/robots.txt');
     expect(robots?.ok()).toBe(true);
     await expect(page.locator('body')).toContainText('User-agent: *');
     await expect(page.locator('body')).toContainText('Allow: /');
-    await expect(page.locator('body')).toContainText('Sitemap: https://MuseumCloud.net/sitemap.xml');
+    await expect(page.locator('body')).toContainText('Sitemap: https://CulturesPro.com/sitemap.xml');
   });
 });
 

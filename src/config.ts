@@ -1,13 +1,13 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'MuseumCloud.net';
+export const SITE_TITLE = 'CulturesPro.com';
 export const SITE_DESCRIPTION = 'A high-performance, 100/100 Lighthouse-optimized Astro 6 SaaS theme with dark mode, MDX blog, and command palette search.';
-export const SITE_URL = 'https://MuseumCloud.net';
-export const REPOSITORY_URL = 'https://github.com/Dixin/MuseumCloud';
+export const SITE_URL = 'https://CulturesPro.com';
+export const REPOSITORY_URL = 'https://github.com/Dixin/CulturesPro';
 
 // Brand Settings
-export const BRAND_NAME = 'MuseumCloud';
+export const BRAND_NAME = 'CulturesPro';
 export const BRAND_LOGO_TEXT = 'MC';
 
 // Social Links

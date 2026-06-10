@@ -1,16 +1,16 @@
 {
-  "name": "MuseumCloud",
+  "name": "CulturesPro",
   "description": "A high-performance Astro 6 SaaS theme. 100/100 Lighthouse optimized with dark mode, MDX blog, changelog, and search.",
   "type": "module",
   "version": "0.0.1",
   "license": "MIT",
-  "homepage": "https://MuseumCloud.net",
+  "homepage": "https://CulturesPro.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dixin/MuseumCloud.git"
+    "url": "https://github.com/Dixin/CulturesPro.git"
   },
   "bugs": {
-    "url": "https://github.com/Dixin/MuseumCloud/issues"
+    "url": "https://github.com/Dixin/CulturesPro/issues"
   },
   "keywords": [
     "astro",

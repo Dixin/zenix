@@ -2,7 +2,7 @@
 
 Plished Astro SaaS theme by with responsive landing sections, pricing, blog, changelog, dark mode, search, and MDX content support.
 
-[Live demo](https://MuseumCloud.net/) · [Repository](https://github.com/Dixin/MuseumCloud)
+[Live demo](https://CulturesPro.com/) · [Repository](https://github.com/Dixin/CulturesPro)
 
 ## Features
 
@@ -21,13 +21,13 @@ Plished Astro SaaS theme by with responsive landing sections, pricing, blog, cha
 Create a new Astro project from the GitHub template:
 
 ```bash
-npm create astro@latest -- --template Dixin/MuseumCloud
+npm create astro@latest -- --template Dixin/CulturesPro
 ```
 
 Or clone the repository directly:
 
 ```bash
-git clone https://github.com/Dixin/MuseumCloud.git my-saas-site
+git clone https://github.com/Dixin/CulturesPro.git my-saas-site
 cd my-saas-site
 npm install
 npm run dev
@@ -49,9 +49,9 @@ npm run test:e2e  # Run Playwright regression tests
 Most site-level settings live in `src/config.ts`:
 
 ```ts
-export const SITE_TITLE = 'MuseumCloud.net';
+export const SITE_TITLE = 'CulturesPro.com';
 export const SITE_DESCRIPTION = 'High-converting, performance-focused Astro theme for Micro-SaaS products.';
-export const SITE_URL = 'https://MuseumCloud.net';
+export const SITE_URL = 'https://CulturesPro.com';
 
 export const SOCIAL_LINKS = {
   twitter: 'https://twitter.com/dixinyan',
