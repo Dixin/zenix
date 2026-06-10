@@ -8,7 +8,7 @@ export const REPOSITORY_URL = 'https://github.com/Dixin/CulturesPro';
 
 // Brand Settings
 export const BRAND_NAME = 'CulturesPro';
-export const BRAND_LOGO_TEXT = 'MC';
+export const BRAND_LOGO_TEXT = 'CP';
 
 // Social Links
 export const SOCIAL_LINKS = {
