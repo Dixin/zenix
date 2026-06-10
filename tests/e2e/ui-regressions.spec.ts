@@ -99,7 +99,7 @@ test.describe('search modal regressions', () => {
 
 test.describe('blog regressions', () => {
   test('blog detail renders author once with fallback avatar and balanced callouts', async ({ page }) => {
-    await page.goto('/blog/introducing-MuseumCloud/');
+    await page.goto('/blog/MuseumCloud/');
 
     const authorName = page.getByText('Dixin');
     await expect(authorName).toHaveCount(2);
@@ -148,9 +148,9 @@ test.describe('seo regressions', () => {
   });
 
   test('article pages expose article dates and BlogPosting structured data', async ({ page }) => {
-    await page.goto('/blog/introducing-MuseumCloud/');
+    await page.goto('/blog/MuseumCloud/');
 
-    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://MuseumCloud.net/blog/introducing-MuseumCloud/');
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://MuseumCloud.net/blog/MuseumCloud/');
     await expect(page.locator('meta[property="og:type"]')).toHaveAttribute('content', 'article');
     await expect(page.locator('meta[property="article:published_time"]')).toHaveAttribute('content', '2026-05-18T00:00:00.000Z');
     await expect(page.locator('meta[property="article:modified_time"]')).toHaveAttribute('content', '2026-05-18T00:00:00.000Z');
@@ -166,7 +166,7 @@ test.describe('seo regressions', () => {
     const sitemap = await page.goto('/sitemap.xml');
     expect(sitemap?.ok()).toBe(true);
     await expect(page.locator('body')).toContainText('https://MuseumCloud.net/');
-    await expect(page.locator('body')).toContainText('https://MuseumCloud.net/blog/introducing-MuseumCloud/');
+    await expect(page.locator('body')).toContainText('https://MuseumCloud.net/blog/MuseumCloud/');
 
     const robots = await page.goto('/robots.txt');
     expect(robots?.ok()).toBe(true);
