@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://museumcloud.net',
+  site: 'https://MuseumCloud.net',
   trailingSlash: 'always',
 
   build: {

@@ -1,37 +1,33 @@
-# Zenix
+# Introduction
 
-Zenix is a polished Astro SaaS theme by [Farros FR](https://farrosfr.com) with responsive landing sections, pricing, blog, changelog, dark mode, search, and MDX content support.
+Plished Astro SaaS theme by with responsive landing sections, pricing, blog, changelog, dark mode, search, and MDX content support.
 
-[Live demo](https://zenix.farros.co/) · [Repository](https://github.com/farrosfr/zenix)
-
-![alt text](readme-hero.png)
-![alt text](readme-speed.png)
-![alt text](readme-speed-mobile.png)
+[Live demo](https://MuseumCloud.net/) · [Repository](https://github.com/Dixin/MuseumCloud)
 
 ## Features
 
-- Astro 6 with static output
-- Tailwind CSS 4 styling
-- Responsive SaaS landing page sections
-- Pricing, FAQ, testimonials, blog, and changelog pages
-- MDX content with reusable callout components
-- Dark and light mode with persisted user preference
-- Command palette search
-- Astro view transitions
-- Playwright UI regression tests
+-   Astro 6 with static output
+-   Tailwind CSS 4 styling
+-   Responsive SaaS landing page sections
+-   Pricing, FAQ, testimonials, blog, and changelog pages
+-   MDX content with reusable callout components
+-   Dark and light mode with persisted user preference
+-   Command palette search
+-   Astro view transitions
+-   Playwright UI regression tests
 
 ## Quick Start
 
 Create a new Astro project from the GitHub template:
 
 ```bash
-npm create astro@latest -- --template farrosfr/zenix
+npm create astro@latest -- --template Dixin/MuseumCloud
 ```
 
 Or clone the repository directly:
 
 ```bash
-git clone https://github.com/farrosfr/zenix.git my-saas-site
+git clone https://github.com/Dixin/MuseumCloud.git my-saas-site
 cd my-saas-site
 npm install
 npm run dev
@@ -53,14 +49,14 @@ npm run test:e2e  # Run Playwright regression tests
 Most site-level settings live in `src/config.ts`:
 
 ```ts
-export const SITE_TITLE = 'Zenix';
+export const SITE_TITLE = 'MuseumCloud.net';
 export const SITE_DESCRIPTION = 'High-converting, performance-focused Astro theme for Micro-SaaS products.';
-export const SITE_URL = 'https://zenix.farros.co';
+export const SITE_URL = 'https://MuseumCloud.net';
 
 export const SOCIAL_LINKS = {
-  twitter: 'https://twitter.com/farrosfr_',
-  github: 'https://github.com/farrosfr',
-  linkedin: 'https://linkedin.com/in/yourhandle',
+  twitter: 'https://twitter.com/dixinyan',
+  github: 'https://github.com/Dixin',
+  linkedin: 'https://linkedin.com/in/dixin',
 };
 ```
 
@@ -70,9 +66,9 @@ Update these values before publishing your own site.
 
 Blog posts and changelog entries are powered by Astro content collections.
 
-- Blog posts: `src/content/blog/`
-- Changelog entries: `src/content/changelog/`
-- Authors: `src/content/authors/`
+-   Blog posts: `src/content/blog/`
+-   Changelog entries: `src/content/changelog/`
+-   Authors: `src/content/authors/`
 
 Example blog post:
 
@@ -81,7 +77,7 @@ Example blog post:
 title: "My First Post"
 description: "A short summary."
 pubDate: 2026-06-01
-author: farros
+author: dixin
 tags: ["update", "feature"]
 ---
 
@@ -94,7 +90,7 @@ tags: ["update", "feature"]
 
 ## Deployment
 
-Zenix builds to a static site and can be deployed to Vercel, Netlify, Cloudflare Pages, GitHub Pages, or any static hosting provider.
+This builds to a static site and can be deployed to Vercel, Netlify, Cloudflare Pages, GitHub Pages, or any static hosting provider.
 
 For production, update `site` in `astro.config.mjs` to match your domain.
 
@@ -118,16 +114,17 @@ This repository is public, uses public npm dependencies, and includes setup docu
 
 ## Contributing and Collaboration
 
-We welcome contributions and collaboration! Whether you want to fix a bug, add a new feature, or improve documentation, your help is greatly appreciated. 
+We welcome contributions and collaboration! Whether you want to fix a bug, add a new feature, or improve documentation, your help is greatly appreciated.
 
 To contribute:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/amazing-feature`).
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`).
-4. Push to the branch (`git push origin feature/amazing-feature`).
-5. Open a Pull Request.
 
-If you have an idea for a major change or a new feature, please open an issue first to discuss it with the maintainers. We are also open to collaborations on expanding Zenix for different use cases! Let's build something awesome together.
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature/amazing-feature`).
+3.  Commit your changes (`git commit -m 'feat: add amazing feature'`).
+4.  Push to the branch (`git push origin feature/amazing-feature`).
+5.  Open a Pull Request.
+
+If you have an idea for a major change or a new feature, please open an issue first to discuss it with the maintainers. We are also open to collaborations on expanding for different use cases! Let's build something awesome together.
 
 ## License
 

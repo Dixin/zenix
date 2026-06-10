@@ -1,5 +1,5 @@
 // Utility to resolve paths correctly regardless of whether the site is hosted 
-// on a root domain (e.g., museumcloud.net) or a subpath (e.g., github.io/museumcloud/)
+// on a root domain (e.g., MuseumCloud.net) or a subpath (e.g., github.io/MuseumCloud/)
 
 export function resolvePath(path: string) {
   // If the path is an external link or an anchor link, leave it alone
