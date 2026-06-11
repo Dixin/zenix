@@ -10,8 +10,9 @@ import { resolvePath } from '../utils/navigation';
       <!-- Logo -->
       <div class="flex-shrink-0">
         <a href={resolvePath('/')} class="flex items-center gap-2 group">
-          <div class="w-8 h-8 bg-primary-600 dark:bg-primary-500 rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
-            <span class="text-white text-xl leading-none">{BRAND_LOGO_TEXT}</span>
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center transition-transform group-hover:scale-105"
+          style="background-image: url(/logo.png);background-size: contain;background-repeat: no-repeat;">
+            <!-- <span class="text-white text-xl leading-none">{BRAND_LOGO_TEXT}</span> -->
           </div>
           <span class="font-heading font-bold text-xl text-slate-900 dark:text-white transition-colors">{BRAND_NAME}</span>
         </a>
@@ -117,9 +118,10 @@ import { resolvePath } from '../utils/navigation';
     updateIcons();
 
     document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
-      if (button.dataset.themeBound === 'true') return;
-      button.dataset.themeBound = 'true';
-      button.addEventListener('click', toggleTheme);
+      const htmlButton = button as HTMLButtonElement;
+      if (htmlButton.dataset.themeBound === 'true') return;
+      htmlButton.dataset.themeBound = 'true';
+      htmlButton.addEventListener('click', toggleTheme);
     });
   }
 

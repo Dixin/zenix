@@ -1,15 +1,184 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import Badge from '../components/Badge.astro';
+import { REPOSITORY_URL } from '../config';
+import { resolvePath } from '../utils/navigation';
 ---
 
 <BaseLayout title="联系" description="联系方式">
-  <div class="bg-slate-50 dark:bg-[#0c0c0f] border-b border-slate-200 dark:border-slate-800 py-16 md:py-24 transition-colors">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">联系</h1>
-      <p class="text-xl text-slate-600 dark:text-slate-400">
-        了解CulturesPro的公司简介。
+  <section class="relative pt-32 pb-32 lg:pt-48 lg:pb-40 overflow-hidden">
+    <!-- Complex Animated Background -->
+    <div class="absolute inset-0 -z-10 bg-white dark:bg-[#09090b]">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIgZmlsbD0icmdiYSgwLDAsMCwwLjA1KSI+PC9jaXJjbGU+Cjwvc3ZnPg==')] dark:bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSI+PC9jaXJjbGU+Cjwvc3ZnPg==')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+      <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[800px] h-[600px] bg-primary-400/20 dark:bg-primary-900/30 rounded-full blur-[120px] opacity-80 mix-blend-multiply dark:mix-blend-screen animate-pulse"></div>
+      <div class="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[600px] h-[500px] bg-accent-400/20 dark:bg-accent-900/30 rounded-full blur-[100px] opacity-80 mix-blend-multiply dark:mix-blend-screen"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="flex justify-center mb-8">
+        <Badge variant="primary" class="px-4 py-1.5 text-sm border border-primary-200 dark:border-primary-800 backdrop-blur-md bg-white/50 dark:bg-primary-900/50">
+          文化传承 🚀 科技护航
+        </Badge>
+      </div>
+      
+      <h1 class="text-6xl sm:text-7xl lg:text-8xl font-heading font-extrabold tracking-tight text-slate-900 dark:text-white mb-8 max-w-5xl mx-auto leading-[1.1]">
+        <span class="text-gradient">国兴文遗保护</span>科技发展有限公司
+      </h1>
+      
+      <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-12 max-w-3xl mx-auto font-sans leading-relaxed">
+        CulturesPro Technologies Co., Ltd.
+      </p>
+      
+      <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-12 max-w-3xl mx-auto font-sans leading-relaxed">
+        通过创新科技推动文化遗产保护与传承，打造数字化未来。
       </p>
     </div>
-  </div>
-  
+  </section>
+
+  <section id="pricing" class="py-32 bg-slate-50 dark:bg-[#0c0c0f] border-t border-slate-200 dark:border-slate-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-heading font-extrabold text-slate-900 dark:text-white mb-6">联系电话</h2>
+        <p class="text-xl text-slate-600 dark:text-slate-400 mb-10">
+        </p>
+
+        <!-- Toggle -->
+        <div class="flex items-center justify-center gap-4 p-2 inline-flex bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-800 shadow-sm mx-auto">
+          <span class="text-sm font-bold text-slate-900 dark:text-white px-4">+86-18210110735</span>
+          <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700"></span>
+          <span class="text-sm font-bold text-slate-900 dark:text-white px-4">+86-18602899950</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll">
+          <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-2">四川</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">成都</p>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 flex-grow">
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>办公地址：四川省成都市武侯区西部智谷B区9栋2单元4楼</li>
+          </ul>
+        </div>
+        <div class="glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll">
+          <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-2">河南</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">郑州</p>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 flex-grow">
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>办公地址：河南省郑州市金水区园田路19号江山商务广场7楼714-715</li>
+          </ul>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8"> </p>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">新乡</p>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 flex-grow">
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>办公地址：河南省新乡市牧野区正商城1期2号楼501</li>
+          </ul>
+        </div>
+        <div class="glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll">
+          <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-2">河北</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">石家庄</p>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 flex-grow">
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>办公地址：河北省石家庄市裕华区翟营南大街43号金马国际1204</li>
+          </ul>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8"> </p>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">保定</p>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 flex-grow">
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>生产研发基地：河北省保定市满城区韩村镇康正工业园区A栋302</li>
+          </ul>
+        </div>
+        <div class="glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll">
+          <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-2">北京</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8"> </p>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 flex-grow">
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>办公地址：北京市朝阳区望京中环南路甲2号25层B2802</li>
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>修复中心：北京市大兴区青云店镇市场路88号</li>
+          </ul>
+        </div>
+        <div class="glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll">
+          <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-2">海南</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">海口</p>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 flex-grow">
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>办公地址： 海南省海口市海甸岛五西路海悦国际B栋</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="min-h-[calc(100vh-4rem)] bg-white py-16 transition-colors dark:bg-[#09090b] md:py-24">
+    <div class="container mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_460px] lg:px-8">
+      <div class="max-w-2xl">
+        <p class="mb-4 text-sm font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400">文化传承 🚀 科技护航</p>
+        <h1 class="mb-6 font-heading text-4xl font-extrabold leading-tight tracking-tight text-slate-900 dark:text-white md:text-6xl">
+          <span class="text-gradient">国兴文遗保护</span>科技发展有限公司
+        </h1>
+        <p class="text-lg leading-8 text-slate-600 dark:text-slate-400">
+          CulturesPro Technologies Co., Ltd.
+        </p>
+        <p class="text-lg leading-8 text-slate-600 dark:text-slate-400">
+          通过创新科技推动文化遗产保护与传承，打造数字化未来。
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <Button href={resolvePath('/blog/certificates/')} variant="primary">资质荣誉</Button>
+          <Button href={resolvePath('/blog/services/')} variant="outline">主营业务</Button>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-2xl p-6 shadow-xl shadow-slate-900/5 dark:shadow-black/20 sm:p-8">
+        <h2 class="mb-6 font-heading text-2xl font-bold text-slate-900 dark:text-white">反馈</h2>
+        <form class="space-y-5" method="POST" id="form">
+          <input type="hidden" name="access_key" value="bc5457c5-0cfc-43f8-a1e8-6feaec2f343e">
+          <div>
+            <label for="name" class="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300">姓名</label>
+            <input id="name" name="name" required type="text" autocomplete="name" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-white" placeholder="姓名" />
+          </div>
+          <div>
+            <label for="email" class="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300">邮箱</label>
+            <input id="email" name="email" required type="email" autocomplete="email" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-white" placeholder="you@example.com" />
+          </div>
+          <div>
+            <label for="message" class="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300">留言</label>
+            <input id="message" name="message" required type="text" autocomplete="message" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-white" placeholder="留言" />
+          </div>
+          <Button type="submit" class="w-full">提交</Button>
+        </form>
+        <p class="mt-6 text-center text-sm text-slate-500 dark:text-slate-400" id="result">
+        </p>
+        <script is:inline>
+          const form = document.getElementById('form');
+          const result = document.getElementById('result');
+
+          form.addEventListener('submit', function(e) {
+              const formData = new FormData(form);
+              e.preventDefault();
+
+              const object = Object.fromEntries(formData);
+              const json = JSON.stringify(object);
+
+              result.innerHTML = "正在提交，请稍后。"
+
+              fetch('https://api.web3forms.com/submit', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json',
+                          'Accept': 'application/json'
+                      },
+                      body: json
+                  })
+                  .then(async response => {
+                      let json = await response.json();
+                      if (response.status == 200) {
+                          result.innerHTML = json.message;
+                      } else {
+                          console.log(response);
+                          result.innerHTML = json.message;
+                      }
+                  })
+                  .catch(error => {
+                      console.log(error);
+                      result.innerHTML = "提交失败，请重试。";
+                  });
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>

@@ -3,19 +3,19 @@ import { Image } from 'astro:assets';
 
 const testimonials = [
   {
-    quote: "CulturesPro saved me weeks of development time. I was able to focus entirely on my product's core features instead of tweaking landing page CSS.",
+    quote: "中国文物学会会员单位",
     author: "David Morgan",
     role: "Founder, DataFlow",
     avatar: "https://i.pravatar.cc/150?u=david"
   },
   {
-    quote: "The cleanest Astro theme I've used. The code is structured beautifully, and the Lighthouse scores are genuinely 100 straight out of the box.",
+    quote: "中国古籍保护协会理事单位",
     author: "Marcus Chen",
     role: "Indie Hacker",
     avatar: "https://i.pravatar.cc/150?u=marcus"
   },
   {
-    quote: "Converted my old React landing page to CulturesPro in a day. The bundle size dropped by 90% and my conversion rate went up by 15%. Highly recommend.",
+    quote: "中国测绘学会文化遗产保护专业委员会会员单位",
     author: "Elena Rodriguez",
     role: "CEO, Streamline",
     avatar: "https://i.pravatar.cc/150?u=elena"
@@ -29,9 +29,9 @@ const testimonials = [
 
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center max-w-3xl mx-auto mb-20 reveal-on-scroll">
-      <h2 class="text-4xl md:text-5xl font-heading font-extrabold text-slate-900 dark:text-white mb-6">Loved by Founders</h2>
+      <h2 class="text-4xl md:text-5xl font-heading font-extrabold text-slate-900 dark:text-white mb-6">权威领航，深耕文保</h2>
       <p class="text-xl text-slate-600 dark:text-slate-400">
-        Don't just take our word for it. See what others are building with CulturesPro.
+        深度参与国家文物局、工信部主导的预防性保护行业标准制定，坚持学术研究与实践应用结合，拥有多重行业核心身份
       </p>
     </div>
 
@@ -39,7 +39,7 @@ const testimonials = [
       {testimonials.map((t, index) => (
         <div class="glass-panel p-8 rounded-3xl flex flex-col h-full hover-glow reveal-on-scroll relative group" style={`transition-delay: ${index * 100}ms;`}>
           <!-- Decorative quotation mark -->
-          <div class="absolute top-6 right-6 text-6xl text-slate-100 dark:text-slate-800/50 font-serif leading-none transform transition-transform group-hover:scale-110 group-hover:-rotate-12 duration-500">"</div>
+          {/* <div class="absolute top-6 right-6 text-6xl text-slate-100 dark:text-slate-800/50 font-serif leading-none transform transition-transform group-hover:scale-110 group-hover:-rotate-12 duration-500">"</div> */}
           
           <!-- Rating stars -->
           <div class="flex gap-1 text-accent-500 dark:text-accent-400 mb-6 relative z-10">
@@ -49,16 +49,16 @@ const testimonials = [
           </div>
           
           <blockquote class="text-slate-700 dark:text-slate-300 text-lg mb-8 flex-grow relative z-10 font-medium leading-relaxed">
-            "{t.quote}"
+            {t.quote}
           </blockquote>
           
-          <div class="flex items-center gap-4 relative z-10">
+          {/* <div class="flex items-center gap-4 relative z-10">
             <Image src={t.avatar} alt={`Portrait of ${t.author}`} width={48} height={48} class="w-12 h-12 rounded-full border-2 border-slate-100 dark:border-slate-800 shadow-sm" loading="lazy" />
             <div>
               <div class="font-bold text-slate-900 dark:text-white">{t.author}</div>
               <div class="text-sm text-slate-500 dark:text-slate-400">{t.role}</div>
             </div>
-          </div>
+          </div> */}
         </div>
       ))}
     </div>

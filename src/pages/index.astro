@@ -10,25 +10,81 @@ import { resolvePath } from '../utils/navigation';
 
 <BaseLayout title="Home">
   <Hero />
-  <Features />
+  <!-- <Features /> -->
   <Testimonials />
-  <Pricing />
+
+  <section id="pricing" class="py-32 bg-slate-50 dark:bg-[#0c0c0f] border-t border-slate-200 dark:border-slate-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-heading font-extrabold text-slate-900 dark:text-white mb-6">主营业务</h2>
+        <p class="text-xl text-slate-600 dark:text-slate-400 mb-10">
+        </p>
+
+        <!-- Toggle -->
+        <div class="flex items-center justify-center gap-4 p-2 inline-flex bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-800 shadow-sm mx-auto">
+          <span class="text-sm font-bold text-slate-900 dark:text-white px-4">全链覆盖</span>
+          <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700"></span>
+          <span class="text-sm font-bold text-slate-900 dark:text-white px-4">多元服务</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll">
+          <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-2">可移动文物修复</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8"> </p>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 flex-grow">
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>可移动文物修复，复制</li>
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>馆藏文物预防性保护</li>
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>馆藏文物数字化保护</li>
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>博物馆展陈设计与施工</li>
+          </ul>
+        </div>
+        <div class="glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll">
+          <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-2">历史建筑保护修复</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8"> </p>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 flex-grow">
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>历史保护建筑的火花利用及城市更新</li>
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>文化遗产保护咨询</li>
+          </ul>
+        </div>
+        <div class="glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll">
+          <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-2">不可移动文物修复</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8"> </p>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 flex-grow">
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>文物保护工程勘察设计，文物保护规划</li>
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>文物保护工程施工：本体修缮，环境整治</li>
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>文物三防工程</li>
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>文物影响评估，文物立项</li>
+          </ul>
+        </div>
+        <div class="glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll">
+          <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-2">博物馆，国保，国内国际学术会议</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8"> </p>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 flex-grow">
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>博物馆定级评估</li>
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>国保申报咨询</li>
+            <li class="flex gap-3"><svg class="h-5 w-5 text-primary-500 dark:text-primary-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>策划承办文遗保护专业国内国际学术会议，交流</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
   <FAQ />
   
   <!-- Final CTA Section before footer -->
   <section class="py-32 bg-primary-600 dark:bg-primary-900 text-white text-center relative overflow-hidden">
     <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjE1KSI+PC9jaXJjbGU+Cjwvc3ZnPg==')] opacity-50"></div>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10 reveal-on-scroll">
-      <h2 class="text-4xl md:text-6xl font-heading font-extrabold mb-6 tracking-tight">Ready to launch your project?</h2>
+      <h2 class="text-4xl md:text-6xl font-heading font-extrabold mb-6 tracking-tight">文化传承 🚀 科技护航</h2>
       <p class="text-xl text-primary-100 dark:text-primary-200 mb-12">
-        Join hundreds of founders who are building faster with CulturesPro.
+        通过创新科技推动文化遗产保护与传承，打造数字化未来。
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href={resolvePath('/pricing/')} class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl bg-white text-primary-600 hover:bg-slate-50 hover:scale-105 transition-all shadow-2xl shadow-black/20">
-          Get CulturesPro Now
+        <a href={resolvePath('/blog/certificates/')} class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl bg-white text-primary-600 hover:bg-slate-50 hover:scale-105 transition-all shadow-2xl shadow-black/20">
+          资质荣誉
         </a>
-        <a href="#features" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl border-2 border-primary-400 text-white hover:bg-primary-700 dark:hover:bg-primary-800 transition-colors">
-          Explore Features
+        <a href={resolvePath('/blog/services/')} class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl border-2 border-primary-400 text-white hover:bg-primary-700 dark:hover:bg-primary-800 transition-colors">
+          主营业务
         </a>
       </div>
     </div>
