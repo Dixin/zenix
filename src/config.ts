@@ -1,13 +1,13 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'CulturesPro.com';
-export const SITE_DESCRIPTION = '国兴文遗保护科技发展有限公司 CulturesPro Technologies Co., Ltd. 文化传承，科技护航。通过创新科技推动文化遗产保护与传承，打造数字化未来。';
-export const SITE_URL = 'https://CulturesPro.com';
-export const REPOSITORY_URL = 'https://github.com/Dixin/CulturesPro';
+export const SITE_TITLE = 'CultureProtect.com';
+export const SITE_DESCRIPTION = '国兴文遗保护科技发展有限公司 CultureProtect Technologies Co., Ltd. 文化传承，科技护航。通过创新科技推动文化遗产保护与传承，打造数字化未来。';
+export const SITE_URL = 'https://CultureProtect.com';
+export const REPOSITORY_URL = 'https://github.com/Dixin/CultureProtect';
 
 // Brand Settings
-export const BRAND_NAME = 'CulturesPro.com';
+export const BRAND_NAME = 'CultureProtect.com';
 export const BRAND_LOGO_TEXT = 'CP';
 
 // Social Links

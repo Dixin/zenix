@@ -1,5 +1,5 @@
 // Utility to resolve paths correctly regardless of whether the site is hosted 
-// on a root domain (e.g., CulturesPro.com) or a subpath (e.g., github.io/CulturesPro/)
+// on a root domain (e.g., CultureProtect.com) or a subpath (e.g., github.io/CultureProtect/)
 
 export function resolvePath(path: string) {
   // If the path is an external link or an anchor link, leave it alone

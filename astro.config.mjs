@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://CulturesPro.com',
+  site: 'https://CultureProtect.com',
   trailingSlash: 'always',
 
   build: {

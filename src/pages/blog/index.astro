@@ -15,7 +15,7 @@ posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 // Resolve authors for all posts
 const postsWithAuthors = await Promise.all(posts.map(async (post) => {
   const author = await getEntry(post.data.author);
-  const authorName = author?.data.name ?? 'CulturesPro';
+  const authorName = author?.data.name ?? 'CultureProtect';
   const authorInitials = authorName
     .split(/\s+/)
     .filter(Boolean)
@@ -28,7 +28,7 @@ const postsWithAuthors = await Promise.all(posts.map(async (post) => {
 }));
 ---
 
-<BaseLayout title="Blog" description="Latest updates, thoughts, and tutorials from the CulturesPro team.">
+<BaseLayout title="博客" description="最新发布的文章和更新，了解文化遗产保护领域的最新动态和见解。">
   <div class="bg-slate-50 dark:bg-[#0c0c0f] border-b border-slate-200 dark:border-slate-800 py-16 md:py-24">
     
   <!-- Complex Animated Background -->
@@ -40,7 +40,7 @@ const postsWithAuthors = await Promise.all(posts.map(async (post) => {
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
       <h1 class="text-4xl md:text-5xl font-heading font-extrabold text-slate-900 dark:text-white mb-4"><span class="text-gradient">国兴文遗保护</span>科技发展有限公司</h1>
       <p class="text-xl text-slate-600 dark:text-slate-400">
-        CulturesPro Technologies Co., Ltd.
+        CultureProtect Technologies Co., Ltd.
       </p>
       <p class="text-xl text-slate-600 dark:text-slate-400">
         通过创新科技推动文化遗产保护与传承，打造数字化未来。
